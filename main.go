@@ -6,6 +6,11 @@ import (
 )
 
 func main() {
+	ExamDayOfWeek()
+	ExamCodesignal()
+}
+
+func ExamDayOfWeek() {
 	data := []services.Day{
 		{StartDate: "1900-01-01", FullDate: "1901-09-06"}, // Friday
 		{StartDate: "1900-01-01", FullDate: "1981-11-12"}, // Thursday
@@ -23,4 +28,31 @@ func main() {
 		}
 		fmt.Printf("%s: %s\n", v.FullDate, day)
 	}
+}
+
+func ExamCodesignal() {
+	// Add
+	fmt.Printf("Add: %v\n", services.Add(1, 3))   // 4
+	fmt.Printf("Add: %v\n", services.Add(10, 10)) // 20
+	fmt.Printf("Add: %v\n", services.Add(0, 1))   // 1
+
+	// Century From Year
+	fmt.Printf("centuryFromYear: %v\n", services.CenturyFromYear(1905)) // 20
+	fmt.Printf("centuryFromYear: %v\n", services.CenturyFromYear(45))   // 1
+	fmt.Printf("centuryFromYear: %v\n", services.CenturyFromYear(1900)) // 19
+
+	// Check Palindrome
+	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("a"))       // true
+	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("aaba"))    // false
+	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("abacaba")) // true
+
+	// Adjacent Elements Product
+	fmt.Printf("adjacentElementsProduct: %v\n", services.AdjacentElementsProduct([]int{3, 6, -2, -5, 7, 3})) // 21
+	fmt.Printf("adjacentElementsProduct: %v\n", services.AdjacentElementsProduct([]int{1, 2, 3, 0}))         // 6
+	fmt.Printf("adjacentElementsProduct: %v\n", services.AdjacentElementsProduct([]int{1, 0, 1, 0, 1000}))   // 0
+
+	//Shape Area
+	fmt.Printf("shapeArea: %v\n", services.ShapeArea(1))    // 1
+	fmt.Printf("ShapeArea: %v\n", services.ShapeArea(100))  // 19801
+	fmt.Printf("shapeArea: %v\n", services.ShapeArea(8999)) // 161946005
 }

@@ -21,13 +21,13 @@ func (day Day) DayOfWeekService() (string, error) {
 		day.StartDate = "1900-01-01"
 	}
 
-	// difference between date
+	// Difference between date
 	diffDay, err := DiffDateService(day.StartDate, day.FullDate, "day")
 	if err != nil {
 		return "", err
 	}
 
-	// since start date with Monday, Array must start with Monday as a result of modular 7
+	// Since start date with Monday, Array must start with Monday as a result of modular 7
 	dayIndex := diffDay % 7
 	daysOfWeek := []string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
 
