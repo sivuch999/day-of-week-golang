@@ -12,7 +12,8 @@ func main() {
 
 func ExamDayOfWeek() {
 	data := []services.Day{
-		{StartDate: "1900-01-01", FullDate: "1901-09-06"}, // Friday
+		{StartDate: "1900-01-01", FullDate: "1900-01-01"}, // Monday
+		{StartDate: "1900-01-01", FullDate: "1900-01-02"}, // Tuesday
 		{StartDate: "1900-01-01", FullDate: "1981-11-12"}, // Thursday
 		{StartDate: "1900-01-01", FullDate: "2004-01-23"}, // Friday
 		{StartDate: "1900-01-01", FullDate: "2010-01-28"}, // Thursday
