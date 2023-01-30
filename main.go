@@ -45,6 +45,7 @@ func ExamCodesignal() {
 	// Check Palindrome
 	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("a"))       // true
 	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("aaba"))    // false
+	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("aa"))      // true
 	fmt.Printf("isPalindrome: %v\n", services.CheckPalindrome("abacaba")) // true
 
 	// Adjacent Elements Product
@@ -54,6 +55,9 @@ func ExamCodesignal() {
 
 	//Shape Area
 	fmt.Printf("shapeArea: %v\n", services.ShapeArea(1))    // 1
+	fmt.Printf("shapeArea: %v\n", services.ShapeArea(2))    // 5
+	fmt.Printf("shapeArea: %v\n", services.ShapeArea(3))    // 13
+	fmt.Printf("shapeArea: %v\n", services.ShapeArea(4))    // 25
 	fmt.Printf("ShapeArea: %v\n", services.ShapeArea(100))  // 19801
 	fmt.Printf("shapeArea: %v\n", services.ShapeArea(8999)) // 161946005
 }
